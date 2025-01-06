@@ -1,9 +1,11 @@
+<!-- Hours Needed -->
+
 <div class="container pt-5">
     
     <div class="buttons">
       <div class="operators row">
         <div class="col-auto">
-            <label>Hours</label>
+            <label class="form-label">Hours Needed</label>
             <button (click)="buttonHour($event.target)" class="btn btn-info">2</button>
             <button (click)="buttonHour($event.target)" class="btn btn-info">3</button>
             <button (click)="buttonHour($event.target)" class="btn btn-info">4</button>
@@ -16,11 +18,30 @@
             <button (click)="buttonHour($event.target)" class="btn btn-info">11</button>
             <button (click)="buttonHour($event.target)" class="btn btn-info">12</button>
           <form action="" [formGroup]="inputHour">
-            <input type="text" formControlName="text">
+            <label class="form-label">Hours Selected</label>
+            <input type="text" formControlName="text" readonly="readonly">
+            <button (click)="clearHour()" class="btn btn-danger">C</button>
           </form>
           
         </div>
       </div>
+
+      <!-- PROPS -->
+
+      <div class="operands row">
+        <div class="col-auto">
+            <label class="form-label">PROPS?</label>
+            <button (click)="buttonProp($event.target)" class="btn btn-prop btn-info">NONE</button>
+            <button (click)="buttonProp($event.target)" class="btn btn-prop btn-info">Standard</button>
+            <button (click)="buttonProp($event.target)" class="btn btn-prop btn-info">X-MAS</button>
+            <button (click)="buttonProp($event.target)" class="btn btn-prop btn-info">Kids</button>
+            <button (click)="clearDisplay()" class="btn btn-danger">C</button>
+            <button (click)="deleteLast()" class="btn btn-danger">X</button>
+        </div>
+      </div>
+
+      <!-- END of QUOTE -->
+
           <div class="operands row">
             <div class="col-auto">
                 <button (click)="buttonClick($event.target)" class="btn btn-warning">1</button>
@@ -56,6 +77,10 @@
   
       </form>
     </div>
+</div>
+
+<div class="container">
+    <h2>Total Cost for Photo Booth:  {{totalCost | currency}}</h2>
 </div>
 
 

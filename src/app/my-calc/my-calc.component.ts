@@ -10,6 +10,10 @@ export class MyCalcComponent implements OnInit{
 
   inputStr: any;
   inputHour: any;
+  totalCost = 0;
+  totalHours = 0;
+  costPerHour = 150;
+  totalExtra = 0;
 
   ngOnInit(): void {
     this.inputStr = new FormGroup({
@@ -22,7 +26,7 @@ export class MyCalcComponent implements OnInit{
 
   buttonClick(buttonElement: any){
     let  buttonText = buttonElement.textContent;
-        if (this.inputStr.controls.text.setValue != null){
+        if (this.inputStr.controls.text.value != null){
             this.inputStr.controls.text.setValue(
       
             this.inputStr.controls.text.value
@@ -31,23 +35,50 @@ export class MyCalcComponent implements OnInit{
           this.inputStr.controls.text.setValue(buttonText)
         }
 
+        
   
   }
 
   buttonHour(buttonElement: any){
     let  buttonText = buttonElement.textContent;
-        if (this.inputHour.controls.text.setValue != null){
-            this.inputHour.controls.text.setValue(
+        // if (this.inputHour.controls.text.value != null){
+        //     this.inputHour.controls.text.setValue(
 
-            this.inputHour.controls.text.value
-            + buttonText)
-        } else {
-          this.inputHour.controls.text.setValue(buttonText)
-        }
+        //     this.inputHour.controls.text.value
+        //     + buttonText)
+        // } else {
+          
+        // }
+        this.inputHour.controls.text.setValue(buttonText)
+        this.totalHours = buttonText;
+        this.totalCost = this.costPerHour * this.totalHours
+        console.log(typeof(this.totalCost))
       }
+
+      buttonProp(buttonElement: any){
+        let  buttonText = buttonElement.textContent;
+            // if (this.inputHour.controls.text.value != null){
+            //     this.inputHour.controls.text.setValue(
+    
+            //     this.inputHour.controls.text.value
+            //     + buttonText)
+            // } else {
+              
+            // }
+            this.inputHour.controls.text.setValue(buttonText)
+            this.totalHours = buttonText;
+            this.totalCost = this.costPerHour * this.totalHours
+            console.log(typeof(this.totalCost))
+          }
+    
 
   clearDisplay() {
     this.inputStr.controls.text.setValue("")
+  }
+
+  clearHour() {
+    this.inputHour.controls.text.setValue("")
+    this.totalCost -= this.totalCost;
   }
 
   calculate() {

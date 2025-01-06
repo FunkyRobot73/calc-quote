@@ -5,6 +5,20 @@
     font-weight: 700;
 }
 
+.btn-prop {
+    margin: 4px;
+    height: 44px;
+    width: 88px;
+    font-weight: 700;
+}
+
+.form-label {
+    margin: 2px;
+    padding: 2px;
+    font-weight: 800;
+    width: 130px;
+}
+
 .container {
     /* width: 50%; */
     display: block;
