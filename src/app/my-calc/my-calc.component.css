@@ -10,3 +10,9 @@
     display: block;
     margin: auto;
 }
+
+input {
+    height: 44px;
+    border-radius: 8px;
+    padding: 16px;
+}
