@@ -18,7 +18,7 @@ export class MyCalcComponent implements OnInit{
 
   buttonClick(buttonElement: any){
 let  buttonText = buttonElement.textContent;
-    if (this.inputStr.controls.text.setValue != ""){
+    if (this.inputStr.controls.text.setValue != null){
       this.inputStr.controls.text.setValue(
   
         this.inputStr.controls.text.value
@@ -28,5 +28,8 @@ let  buttonText = buttonElement.textContent;
     }
 
   
+  }
+  clearDisplay() {
+    this.inputStr.controls.text.setValue("")
   }
 }
