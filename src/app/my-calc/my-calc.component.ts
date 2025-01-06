@@ -9,9 +9,13 @@ import { FormGroup, FormControl } from "@angular/forms";
 export class MyCalcComponent implements OnInit{
 
   inputStr: any;
+  inputHour: any;
 
   ngOnInit(): void {
     this.inputStr = new FormGroup({
+      text : new FormControl()
+    })
+    this.inputHour = new FormGroup({
       text : new FormControl()
     })
   }
@@ -29,6 +33,18 @@ export class MyCalcComponent implements OnInit{
 
   
   }
+
+  buttonHour(buttonElement: any){
+    let  buttonText = buttonElement.textContent;
+        if (this.inputHour.controls.text.setValue != null){
+            this.inputHour.controls.text.setValue(
+
+            this.inputHour.controls.text.value
+            + buttonText)
+        } else {
+          this.inputHour.controls.text.setValue(buttonText)
+        }
+      }
 
   clearDisplay() {
     this.inputStr.controls.text.setValue("")
