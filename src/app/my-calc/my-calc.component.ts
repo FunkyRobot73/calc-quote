@@ -10,10 +10,11 @@ export class MyCalcComponent implements OnInit{
 
   inputStr: any;
   inputHour: any;
+  inputProp: any;
   totalCost = 0;
   totalHours = 0;
   costPerHour = 150;
-  totalExtra = 0;
+  totalExtra = [];
 
   ngOnInit(): void {
     this.inputStr = new FormGroup({
@@ -65,8 +66,8 @@ export class MyCalcComponent implements OnInit{
             // } else {
               
             // }
-            this.inputHour.controls.text.setValue(buttonText)
-            this.totalHours = buttonText;
+            this.inputProp.controls.text.setValue(buttonText)
+            this.totalExtra = buttonText;
             this.totalCost = this.costPerHour * this.totalHours
             console.log(typeof(this.totalCost))
           }
@@ -91,5 +92,7 @@ deleteLast(){
   str = str.slice(0, -1)
   this.inputStr.controls.text.setValue(str)
 }
+
+
 
 }

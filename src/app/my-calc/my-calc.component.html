@@ -37,6 +37,11 @@
             <button (click)="buttonProp($event.target)" class="btn btn-prop btn-info">Kids</button>
             <button (click)="clearDisplay()" class="btn btn-danger">C</button>
             <button (click)="deleteLast()" class="btn btn-danger">X</button>
+            <form action="" [formGroup]="inputProp">
+                <label class="form-label">Props Selected</label>
+                <input type="text" formControlName="text" readonly="readonly">
+                <button (click)="clearHour()" class="btn btn-danger">C</button>
+              </form>
         </div>
       </div>
 
