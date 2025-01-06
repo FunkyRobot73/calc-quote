@@ -1,0 +1,12 @@
+.btn {
+    margin: 4px;
+    height: 44px;
+    width: 44px;
+    font-weight: 700;
+}
+
+.container {
+    width: 50%;
+    display: block;
+    margin: auto;
+}

@@ -17,19 +17,25 @@ export class MyCalcComponent implements OnInit{
   }
 
   buttonClick(buttonElement: any){
-let  buttonText = buttonElement.textContent;
-    if (this.inputStr.controls.text.setValue != null){
-      this.inputStr.controls.text.setValue(
-  
-        this.inputStr.controls.text.value
-        + buttonText)
-    } else {
-      this.inputStr.controls.text.setValue(buttonText)
-    }
+    let  buttonText = buttonElement.textContent;
+        if (this.inputStr.controls.text.setValue != null){
+            this.inputStr.controls.text.setValue(
+      
+            this.inputStr.controls.text.value
+            + buttonText)
+        } else {
+          this.inputStr.controls.text.setValue(buttonText)
+        }
 
   
   }
+
   clearDisplay() {
     this.inputStr.controls.text.setValue("")
+  }
+
+  calculate() {
+    let result = eval(this.inputStr.controls.text.value)
+    this.inputStr.controls.text.setValue(result)
   }
 }

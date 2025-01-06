@@ -8,36 +8,36 @@
     <div class="buttons">
       <div class="operators row">
         <div class="col-auto">
-          <button (click)="buttonClick($event.target)" class="btn">+</button>
-          <button (click)="buttonClick($event.target)" class="btn">*</button>
-          <button (click)="buttonClick($event.target)" class="btn">-</button>
-          <button (click)="buttonClick($event.target)" class="btn">/</button>
-          <button class="btn">=</button>
+          <button (click)="buttonClick($event.target)" class="btn btn-info">+</button>
+          <button (click)="buttonClick($event.target)" class="btn btn-info">*</button>
+          <button (click)="buttonClick($event.target)" class="btn btn-info">-</button>
+          <button (click)="buttonClick($event.target)" class="btn btn-info">/</button>
+          <button (click)="calculate()" class="btn btn-success">=</button>
         </div>
       </div>
           <div class="operands row">
             <div class="col-auto">
-                <button (click)="buttonClick($event.target)" class="btn">1</button>
-                <button (click)="buttonClick($event.target)" class="btn">2</button>
-                <button (click)="buttonClick($event.target)" class="btn">3</button>
-                <button (click)="clearDisplay()" class="btn">Clear</button>
+                <button (click)="buttonClick($event.target)" class="btn btn-warning">1</button>
+                <button (click)="buttonClick($event.target)" class="btn btn-warning">2</button>
+                <button (click)="buttonClick($event.target)" class="btn btn-warning">3</button>
+                <button (click)="clearDisplay()" class="btn btn-danger">Clear</button>
 
             </div>
           </div>
           <div class="operands row">
             <div class="col-auto">
-                <button (click)="buttonClick($event.target)" class="btn">4</button>
-                <button (click)="buttonClick($event.target)" class="btn">5</button>
-                <button (click)="buttonClick($event.target)" class="btn">6</button>
-                <button (click)="buttonClick($event.target)" class="btn">0</button>
+                <button (click)="buttonClick($event.target)" class="btn btn-warning">4</button>
+                <button (click)="buttonClick($event.target)" class="btn btn-warning">5</button>
+                <button (click)="buttonClick($event.target)" class="btn btn-warning">6</button>
+                <button (click)="buttonClick($event.target)" class="btn btn-warning">0</button>
             </div>
           </div>
           <div class="operands row">
             <div class="col-auto">
-                <button (click)="buttonClick($event.target)" class="btn">7</button>
-                <button (click)="buttonClick($event.target)" class="btn">8</button>
-                <button (click)="buttonClick($event.target)" class="btn">9</button>
-                <button (click)="buttonClick($event.target)" class="btn">.</button>
+                <button (click)="buttonClick($event.target)" class="btn btn-warning">7</button>
+                <button (click)="buttonClick($event.target)" class="btn btn-warning">8</button>
+                <button (click)="buttonClick($event.target)" class="btn btn-warning">9</button>
+                <button (click)="buttonClick($event.target)" class="btn btn-warning">.</button>
             </div>
           </div>
 </div>
